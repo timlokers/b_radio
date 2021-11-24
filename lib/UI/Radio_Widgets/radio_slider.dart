@@ -4,9 +4,12 @@ class RadioSlider extends StatefulWidget {
 
   final double minValue;
   final double maxValue;
+
   final double value;
 
-  RadioSlider(this.minValue, this.maxValue, this.value);
+  final ValueChanged<double> onChanged;
+
+  RadioSlider({required this.minValue, required this.maxValue, required this.value, required this.onChanged});
 
   @override
   State<RadioSlider> createState() => _RadioSliderState();

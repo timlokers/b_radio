@@ -22,13 +22,13 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   double _value = 0.0;
+
   void _setValue(double value) => setState(() => _value = value);
   static const double minValue = 0;
   static const double maxValue = 450;
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Flutter Tutorial'),
@@ -43,9 +43,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 onChanged: _setValue,
                 min: minValue,
                 max: maxValue,
-                size: 150
-            ),
-            RadioSlider(minValue, maxValue, _value),
+                size: 150),
+            RadioSlider(
+                minValue: minValue,
+                maxValue: maxValue,
+                value: _value,
+                onChanged: _setValue),
             Text(
               'Value: ${_value.toStringAsFixed(3)}',
             ),
