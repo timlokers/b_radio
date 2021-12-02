@@ -1,3 +1,4 @@
+import 'package:b_radio/UI/Widgets/Radio_Widgets/radio_knob_line.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -16,7 +17,7 @@ class RadioKnob extends StatefulWidget {
   final ValueChanged<double> onChanged;
 
   // Define a build method for the widget which uses these parameters
-  RadioKnob({required this.value, this.min = 0, this.max = 1, this.color = Colors.blue, this.size = 50, required this.onChanged});
+  RadioKnob({required this.value, this.min = 0, this.max = 1, this.color = Colors.blue, this.size = 10, required this.onChanged});
 
   @override
   State<StatefulWidget> createState() => KnobState();
@@ -26,8 +27,8 @@ class KnobState extends State<RadioKnob> {
 
   // These are static constants because they are in internal parameters of the knob that
   // can't be changed from the outside
-  static const double minAngle = -160;
-  static const double maxAngle = 160;
+  static const double minAngle = -210;
+  static const double maxAngle = 40;
   static const double sweepAngle = maxAngle - minAngle;
 
   @override
@@ -57,11 +58,9 @@ class KnobState extends State<RadioKnob> {
             child: ClipOval(
                 child: Container(
                     color: widget.color,
-                    child: Icon(
-                      Icons.arrow_upward,
-                      color: Colors.white,
-                      size: size,
-                    )
+                    child:  CustomPaint(
+                      painter: LinePainter(),
+                    ),
                 )
             ),
           ),
