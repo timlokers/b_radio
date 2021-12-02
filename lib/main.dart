@@ -44,11 +44,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 min: minValue,
                 max: maxValue,
                 size: 150),
-            RadioSlider(
-                minValue: minValue,
-                maxValue: maxValue,
+            Slider(
                 value: _value,
-                onChanged: _setValue),
+                onChanged: _setValue,
+                min: minValue,
+                max: maxValue),
             Text(
               'Value: ${_value.toStringAsFixed(3)}',
             ),
