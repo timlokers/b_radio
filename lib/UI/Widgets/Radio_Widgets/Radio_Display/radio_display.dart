@@ -19,6 +19,7 @@ class RadioState extends State<RadioDisplay> {
             children: const [
               Text('Station'),
               Text('Song'),
+              Text('bitrate'),
             ],
           ),
         ),
