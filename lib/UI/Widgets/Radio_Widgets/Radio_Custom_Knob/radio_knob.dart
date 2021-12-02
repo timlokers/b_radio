@@ -41,7 +41,7 @@ class KnobState extends State<RadioKnob> {
     double _angle = (minAngle + _normalisedValue * sweepAngle) * 2 * pi / 360;
     double size = widget.size;
     return Center(
-      child: Container(
+      child: SizedBox(
         width: size,
         height: size,
         child: GestureDetector(

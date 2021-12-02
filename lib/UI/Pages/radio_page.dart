@@ -2,6 +2,7 @@ import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Slider/radio_slide
 import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Slider/radio_slider_tick.dart';
 import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Slider/radio_slider_track.dart';
 import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Knob/radio_knob.dart';
+import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Display/radio_display.dart';
 import 'package:flutter/material.dart';
 
 class RadioPage extends StatefulWidget {
@@ -35,6 +36,7 @@ class _RadioPageState extends State<RadioPage> {
                     Container(
                       width: MediaQuery.of(context).size.width * 0.5,
                       color: Colors.purple,
+                      child: RadioDisplay(),
                     ), //Display section
                     Container(
                       width: MediaQuery.of(context).size.width * 0.24,
