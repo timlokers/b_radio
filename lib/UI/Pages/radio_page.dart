@@ -1,7 +1,7 @@
 import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Slider/radio_slider_shape.dart';
 import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Slider/radio_slider_tick.dart';
 import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Slider/radio_slider_track.dart';
-import 'package:b_radio/UI/Widgets/Radio_Widgets/radio_knob.dart';
+import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Knob/radio_knob.dart';
 import 'package:flutter/material.dart';
 
 class RadioPage extends StatefulWidget {
