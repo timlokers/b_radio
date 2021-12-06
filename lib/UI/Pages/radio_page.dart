@@ -3,6 +3,7 @@ import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Slider/radio_slide
 import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Slider/radio_slider_track.dart';
 import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Knob/radio_knob.dart';
 import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Display/radio_display.dart';
+import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Speaker.dart';
 import 'package:flutter/material.dart';
 
 class RadioPage extends StatefulWidget {
@@ -78,6 +79,7 @@ class _RadioPageState extends State<RadioPage> {
             ),
           ), //Frequency beam section
           Container(
+            child: RadioSpeaker(),
             height: MediaQuery.of(context).size.height * 0.55,
             color: Colors.deepOrangeAccent,
           ), //Speaker section
