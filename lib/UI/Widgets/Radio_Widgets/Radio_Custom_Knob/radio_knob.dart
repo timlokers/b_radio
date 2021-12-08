@@ -27,8 +27,8 @@ class KnobState extends State<RadioKnob> {
 
   // These are static constants because they are in internal parameters of the knob that
   // can't be changed from the outside
-  static const double minAngle = -210;
-  static const double maxAngle = 40;
+  static const double minAngle = -120;
+  static const double maxAngle = 120;
   static const double sweepAngle = maxAngle - minAngle;
 
   @override
@@ -55,14 +55,7 @@ class KnobState extends State<RadioKnob> {
           },
           child: Transform.rotate(
             angle: _angle,
-            child: ClipOval(
-                child: Container(
-                    color: widget.color,
-                    child:  CustomPaint(
-                      painter: LinePainter(),
-                    ),
-                )
-            ),
+            child: Image.asset('./Resources/Images/knobs/Knob.png', width: 200,),
           ),
         ),
       ),

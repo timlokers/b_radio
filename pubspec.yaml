@@ -71,6 +71,13 @@ flutter:
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
+  assets:
+    - Resources/Images/speaker.jpg
+    - Resources/Images/knobs/Knob.png
+    - Resources/Images/knobs/KnobBitrate_320_mini.png
+    - Resources/Images/knobs/KnobBitrate_192_mini.png
+    - Resources/Images/knobs/KnobBitrate_128_mini.png
+    - Resources/Images/knobs/KnobBitrate_0_mini.png
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages

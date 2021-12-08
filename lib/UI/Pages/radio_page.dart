@@ -3,7 +3,8 @@ import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Slider/radio_slide
 import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Slider/radio_slider_track.dart';
 import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Knob/radio_knob.dart';
 import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Display/radio_display.dart';
-import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Speaker.dart';
+import 'package:b_radio/UI/Widgets/Radio_Widgets/radio_bitrate_knob.dart';
+import 'package:b_radio/UI/Widgets/Radio_Widgets/radio_speaker.dart';
 import 'package:flutter/material.dart';
 
 class RadioPage extends StatefulWidget {
@@ -25,38 +26,33 @@ class _RadioPageState extends State<RadioPage> {
         children: [
           Container(
             height: MediaQuery.of(context).size.height * 0.25,
-            color: Colors.blue,
               child: Container(
                 padding: const EdgeInsets.fromLTRB(7, 0, 0, 0),
                 child: Row(
                   children: [
                     Container(
                       width: MediaQuery.of(context).size.width * 0.24,
-                      color: Colors.blueGrey,
+                      child: RadioBitrateKnob(),
                     ) ,//Bitrate control section
                     Container(
                       width: MediaQuery.of(context).size.width * 0.5,
-                      color: Colors.purple,
                       child: RadioDisplay(),
                     ), //Display section
                     Container(
                       width: MediaQuery.of(context).size.width * 0.24,
-                      color: Colors.blueGrey,
                       child: RadioKnob(
                           value: _value,
-                          color: Colors.grey,
                           onChanged: _setValue,
                           min: minValue,
                           max: maxValue,
-                          size: 100),
+                          size: 250),
                     ), //Station knob section
                   ],
                 ),
               ),
           ), //Display and control section
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height * 0.2,
-            color: Colors.amberAccent,
             child: SliderTheme(
               data: SliderThemeData(
                   tickMarkShape: RadioSliderTick(),

@@ -16,6 +16,7 @@ class PartyAllTheTime extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: RadioPage(),
+      theme: ThemeData(scaffoldBackgroundColor:  const Color(0xfff2e587)),
     );
   }
 }

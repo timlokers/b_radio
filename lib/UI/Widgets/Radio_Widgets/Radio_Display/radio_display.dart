@@ -14,7 +14,7 @@ class RadioState extends State<RadioDisplay> {
       child: Center(
         child: Container(
           width: double.infinity,
-          color: Colors.amberAccent,
+          color: const Color(0xffd96855),
           child: Column(
             children: [
               const SizedBox(
@@ -23,7 +23,7 @@ class RadioState extends State<RadioDisplay> {
               const Text(
                 'Radio V-Rock',
                 style: TextStyle(
-                  fontSize: 26,
+                  fontSize: 20,
                   fontFamily: 'DigitalClock',
                   shadows: <Shadow>[
                     Shadow(
@@ -35,12 +35,12 @@ class RadioState extends State<RadioDisplay> {
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 2,
               ),
               const Text(
-                'Turbo Lover - Judas Priest',
+                'Turbo Lover - Judas Priestttttttt',
                 style: TextStyle(
-                  fontSize: 22,
+                  fontSize: 10,
                   fontFamily: 'DigitalClock',
                   shadows: <Shadow>[
                     Shadow(
@@ -52,7 +52,7 @@ class RadioState extends State<RadioDisplay> {
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 8,
               ),
               Container(
                 padding: const EdgeInsets.fromLTRB(0, 0, 5.0, 0),
@@ -61,7 +61,7 @@ class RadioState extends State<RadioDisplay> {
                   child: Text(
                     'Heavy Metal',
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 9,
                       fontFamily: 'DigitalClock',
                       fontStyle: FontStyle.italic,
                       shadows: <Shadow>[

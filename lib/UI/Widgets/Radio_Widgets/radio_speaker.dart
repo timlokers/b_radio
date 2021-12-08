@@ -7,7 +7,7 @@ class RadioSpeaker extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('../Resources/Images/speaker.jpg'),
+              image: AssetImage('./Resources/Images/speaker.jpg'),
               fit: BoxFit.cover,
             )
         ),
