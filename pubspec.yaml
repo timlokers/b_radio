@@ -73,6 +73,7 @@ flutter:
   # https://flutter.dev/assets-and-images/#resolution-aware.
   assets:
     - Resources/Images/speaker.jpg
+    - Resources/Images/frequency_label.png
     - Resources/Images/knobs/Knob.png
     - Resources/Images/knobs/KnobBitrate_320_mini.png
     - Resources/Images/knobs/KnobBitrate_192_mini.png

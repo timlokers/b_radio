@@ -6,6 +6,7 @@ import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Display/radio_display.dar
 import 'package:b_radio/UI/Widgets/Radio_Widgets/radio_bitrate_knob.dart';
 import 'package:b_radio/UI/Widgets/Radio_Widgets/radio_speaker.dart';
 import 'package:flutter/material.dart';
+import 'package:b_radio/UI/Widgets/Radio_Widgets/radio_frequency_label.dart';
 
 class RadioPage extends StatefulWidget {
   @override
@@ -24,35 +25,39 @@ class _RadioPageState extends State<RadioPage> {
     return Scaffold(
       body: Column(
         children: [
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height * 0.25,
-              child: Container(
-                padding: const EdgeInsets.fromLTRB(7, 0, 0, 0),
-                child: Row(
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.24,
-                      child: RadioBitrateKnob(),
-                    ) ,//Bitrate control section
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.5,
-                      child: RadioDisplay(),
-                    ), //Display section
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.24,
-                      child: RadioKnob(
-                          value: _value,
-                          onChanged: _setValue,
-                          min: minValue,
-                          max: maxValue,
-                          size: 250),
-                    ), //Station knob section
-                  ],
-                ),
+            child: Container(
+              padding: const EdgeInsets.fromLTRB(7, 0, 0, 0),
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.24,
+                    child: RadioBitrateKnob(),
+                  ), //Bitrate control section
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.5,
+                    child: RadioDisplay(),
+                  ), //Display section
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.24,
+                    child: RadioKnob(
+                        value: _value,
+                        onChanged: _setValue,
+                        min: minValue,
+                        max: maxValue,
+                        size: 250),
+                  ), //Station knob section
+                ],
               ),
+            ),
           ), //Display and control section
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.2,
+            child: RadioFrequencyLabel(),
+            height: MediaQuery.of(context).size.height * 0.1,
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.075,
             child: SliderTheme(
               data: SliderThemeData(
                   tickMarkShape: RadioSliderTick(),
@@ -76,7 +81,7 @@ class _RadioPageState extends State<RadioPage> {
           ), //Frequency beam section
           Container(
             child: RadioSpeaker(),
-            height: MediaQuery.of(context).size.height * 0.55,
+            height: MediaQuery.of(context).size.height * 0.575,
             color: Colors.deepOrangeAccent,
           ), //Speaker section
         ],
