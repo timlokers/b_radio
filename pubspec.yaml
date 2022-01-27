@@ -29,6 +29,7 @@ environment:
 dependencies:
   get: ^4.6.1
   http: ^0.13.4
+  audioplayers: ^0.20.1
   flutter:
     sdk: flutter
 
@@ -74,6 +75,8 @@ flutter:
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   assets:
+    #Images
+
     - Resources/Images/speaker.jpg
     - Resources/Images/frequency_label.png
     - Resources/Images/knobs/Knob.png
@@ -81,6 +84,10 @@ flutter:
     - Resources/Images/knobs/KnobBitrate_192_mini.png
     - Resources/Images/knobs/KnobBitrate_128_mini.png
     - Resources/Images/knobs/KnobBitrate_0_mini.png
+
+    # Sound effects
+    - Resources/SoundEffects/SwitchOff.wav
+    - Resources/SoundEffects/SwitchOn.wav
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
