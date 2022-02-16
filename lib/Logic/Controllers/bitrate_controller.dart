@@ -3,12 +3,12 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:get/get.dart';
 
 class BitrateController extends GetxController{
-  int count = 0;
+  static RxInt count = 0.obs;
   String imageString = './Resources/Images/knobs/KnobBitrate_0_mini.png';
 
   void increment(){
     if(count == 3){
-      count = 0;
+      count = 0.obs;
       imageString = './Resources/Images/knobs/KnobBitrate_0_mini.png';
     }
     else{
