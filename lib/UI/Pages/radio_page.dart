@@ -1,3 +1,6 @@
+import 'package:b_radio/Logic/Services/radiostreamservice.dart';
+import 'package:b_radio/Logic/Services/streamservice.dart';
+import 'package:b_radio/Model/radiostream.dart';
 import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Slider/radio_slider_shape.dart';
 import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Slider/radio_slider_tick.dart';
 import 'package:b_radio/UI/Widgets/Radio_Widgets/Radio_Custom_Slider/radio_slider_track.dart';
@@ -19,6 +22,13 @@ class _RadioPageState extends State<RadioPage> {
   void _setValue(double value) => setState(() => _value = value);
   static const double minValue = 0;
   static const double maxValue = 100;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getRadioStream();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +75,7 @@ class _RadioPageState extends State<RadioPage> {
                   trackShape: RadioSliderTrack(),
                   thumbShape: RadioSliderShape()),
               child: Slider(
-                divisions: 100,
+                divisions: 50,
                 min: 0,
                 max: 100,
                 thumbColor: Colors.redAccent,
@@ -88,4 +98,12 @@ class _RadioPageState extends State<RadioPage> {
       ),
     );
   }
+}
+
+void getRadioStream(){
+  Future<RadioStream> streamList;
+
+  streamList = RadioStreamService().fetchRadioStreams();
+  
+  print('This is the length:' + streamList.toString());
 }

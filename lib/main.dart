@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'UI/Pages/radio_page.dart';
-import 'UI/Widgets/Radio_Widgets/Radio_Custom_Slider/radio_slider_shape.dart';
-import 'UI/Widgets/Radio_Widgets/Radio_Custom_Slider/radio_slider_tick.dart';
-import 'UI/Widgets/Radio_Widgets/Radio_Custom_Slider/radio_slider_track.dart';
-import 'UI/Widgets/Radio_Widgets/Radio_Custom_Knob/radio_knob.dart';
 
 void main() => runApp(PartyAllTheTime());
 
